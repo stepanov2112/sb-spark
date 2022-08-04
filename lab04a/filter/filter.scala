@@ -4,7 +4,7 @@ import org.apache.spark.sql.functions.{col, from_unixtime, split, substring}
 
 object filter extends App {
 
-  val spark = SparkSession.builder().appName("lab04").config("spark.master", "local[*]").getOrCreate()
+  val spark = SparkSession.builder().appName("lab04").getOrCreate()
   import spark.implicits._
 
   val fs = FileSystem.get(spark.sparkContext.hadoopConfiguration)
